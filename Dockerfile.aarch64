@@ -1,7 +1,7 @@
 FROM aarch64/debian 
 MAINTAINER David Personette <dperson@gmail.com>
 
-RUN sed -i '/debian-security/d' etc/apt/sources.list
+RUN sed -i '/security.debian/d' /etc/apt/sources.list
 
 # Install samba
 RUN export DEBIAN_FRONTEND='noninteractive' && \
